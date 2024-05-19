@@ -1,0 +1,77 @@
+.timeline-with-icons {
+  border-left: 1px solid hsl(0, 0%, 90%);
+  position: relative;
+  list-style: none;
+}
+
+.timeline-with-icons .timeline-item {
+  position: relative;
+}
+
+.timeline-with-icons .timeline-item:after {
+  position: absolute;
+  display: block;
+  top: 0;
+}
+
+.timeline-with-icons .timeline-icon {
+  position: absolute;
+  left: -48px;
+  background-color: hsl(217, 88.2%, 90%);
+  color: hsl(217, 88.8%, 35.1%);
+  border-radius: 50%;
+  height: 31px;
+  width: 31px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#timeline {
+  z-index: 1;
+}
+.icon {
+  margin: 5px;
+}
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box {
+  border: 1px solid;
+  height: 50px;
+  padding: 5px;
+}
+.nav-tabs {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Adjust the z-index to ensure the navbar is above other elements */
+}
+
+#card {
+  margin-top: 40px; /* Add margin-top to create space for the fixed navbar */
+}
+
+.timeline-with-icons {
+  margin-top: 40px; /* Add margin-top to create space for the fixed navbar */
+}
+/* Add a new CSS class to your timeline-with-icons element */
+.timeline-with-icons.scroll-animation {
+  /* Add the animation using CSS animations */
+  animation: scroll-animation 1s ease-in-out forwards;
+}
+
+/* Define the animation */
+@keyframes scroll-animation {
+  from {
+    /* Starting position of the animation */
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    /* Ending position of the animation */
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
